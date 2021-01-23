@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Redis;
 
 Route::get('/', function () {
     try{
-        Cache::put('key', 'value');
+        Cache::put('key', 'value2');
         dump(Cache::get('key'));
 //        $redis=Redis::connect('127.0.0.1',3306);
         return response('redis working');
