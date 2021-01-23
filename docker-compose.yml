@@ -1,0 +1,24 @@
+version: '3'
+
+networks:
+  laravel:
+
+services:
+  laravel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel
+    image: containerregistermateus.azurecr.io/teste:v4
+    ports:
+      - "80:80"
+    networks:
+      - laravel
+
+  redis:
+    image: redis:alpine
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - laravel
