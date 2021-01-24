@@ -30,5 +30,5 @@ Route::get('/', function () {
 //    dump(env('APP_ENV'));
 //    Log::info('testes');
 //    return view('welcome');
-    //https://$teste-azure-app:u0u0hLSFgNQ6fzq03a7EF62cmrhZ73Cl4JGzftjmMJojaFWt14QuYXKCglMP@teste-azure-app.scm.azurewebsites.net/docker/hook
+    //az webapp create --resource-group myResourceGroup --plan myAppServicePlan --name webapptestemateus --multicontainer-config-type compose --multicontainer-config-file docker-compose.yml
 });
