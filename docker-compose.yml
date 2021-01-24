@@ -9,7 +9,7 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: laravel
-    image: containerregistermateus.azurecr.io/teste
+    image: containerregistermateus.azurecr.io/teste:latest
     ports:
       - "80:80"
     networks:
