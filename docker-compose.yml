@@ -14,11 +14,11 @@ services:
       - "80:80"
     networks:
       - laravel
-
-  redis:
-    image: redis:alpine
-    container_name: redis
-    ports:
-      - "6379:6379"
-    networks:
-      - laravel
+#
+#  redis:
+#    image: redis:alpine
+#    container_name: redis
+#    ports:
+#      - "6379:6379"
+#    networks:
+#      - laravel
