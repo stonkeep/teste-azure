@@ -27,3 +27,13 @@ steps:
     projectName: 'containerregistermateus.azurecr.io/teste'
     action: 'Run a Docker Compose command'
     dockerComposeCommand: 'build'
+
+- task: DockerCompose@0
+  inputs:
+    containerregistrytype: 'Azure Container Registry'
+    azureSubscription: 'Avaliação Gratuita(04aad890-7051-4edb-ba96-471cec51993b)'
+    azureContainerRegistry: '{"loginServer":"containerregistermateus.azurecr.io", "id" : "/subscriptions/04aad890-7051-4edb-ba96-471cec51993b/resourceGroups/testeLaravel/providers/Microsoft.ContainerRegistry/registries/containerRegisterMateus"}'
+    dockerComposeFile: '**/docker-compose.yml'
+    projectName: 'containerregistermateus.azurecr.io/teste'
+    action: 'Run a Docker Compose command'
+    dockerComposeCommand: 'push'
