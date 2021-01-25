@@ -18,14 +18,14 @@ use Illuminate\Support\Facades\Redis;
 */
 
 Route::get('/', function () {
-    try{
-        Cache::put('key', 'value');
-        dump(Cache::get('key'));
-//        $redis=Redis::connect('127.0.0.1',3306);
-        return response('redis working');
-    }catch(\Predis\Connection\ConnectionException $e){
-        return response('error connection redis');
-    }
+    phpinfo();
+//    try{
+//        Cache::put('key', 'value');
+//        dump(Cache::get('key'));
+//        return response('redis working');
+//    }catch(\Predis\Connection\ConnectionException $e){
+//        return response('error connection redis');
+//    }
 //    dump(env('APP_ENV'));
 //    Log::info('testes');
 //    return view('welcome');

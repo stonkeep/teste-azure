@@ -39,6 +39,7 @@ apk add \
 	php7-ctype \
 	php7-session \
 	php7-redis \
+#	php7-opcache \
 	php7-exif
 
 # php modules part 2, separated installations
@@ -46,6 +47,9 @@ apk add php7-simplexml php7-fileinfo php7-pcntl php7-posix
 
 # add php as default /usr/bin/php
 cp /usr/bin/php7 /usr/bin/php
+
+#OPCconfig
+cp /docker/configs/opcache.ini /etc/php7/conf.d/opcache.ini
 
 # add laravel schedule:run to cron
 echo "* * * * * /docker/laravel-schedule-run.sh" | tee -a /etc/crontabs/apache
