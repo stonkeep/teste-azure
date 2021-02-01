@@ -5,12 +5,12 @@ ADD .docker /docker
 RUN chmod -R +x /docker
 
 # installations
-RUN /docker/installations/prepare.sh \
-    && /docker/installations/basic.sh \
-    && /docker/installations/apache.sh \
-    && /docker/installations/php.sh \
-    && /docker/installations/redis.sh \
-    && /docker/installations/cleanup.sh
+RUN /docker/installations/prepare.sh
+RUN /docker/installations/basic.sh
+RUN /docker/installations/apache.sh
+RUN /docker/installations/php.sh
+RUN /docker/installations/redis.sh
+RUN /docker/installations/cleanup.sh
 
 # expose ports
 EXPOSE 80

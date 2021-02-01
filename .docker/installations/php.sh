@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo 'Instalando PHP'
 # install
 apk add \
     php7 php7-phar php7-json php7-iconv php7-openssl \
