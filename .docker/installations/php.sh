@@ -1,7 +1,5 @@
 #!/bin/sh
 
-echo 'Instalando PHP'
-# install
 apk add \
     php7 php7-phar php7-json php7-iconv php7-openssl \
     php7-apache2
@@ -40,7 +38,7 @@ apk add \
 	php7-ctype \
 	php7-session \
 	php7-redis \
-#	php7-opcache \
+	php7-opcache \
 	php7-exif
 
 # php modules part 2, separated installations
